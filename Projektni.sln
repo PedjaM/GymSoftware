@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projektni", "Projektni\Projektni.csproj", "{1098E43C-E135-4ED6-B5E6-C4C00C62D8A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteka", "Biblioteka\Biblioteka.csproj", "{72173622-73E2-4716-9ACA-938421AD5775}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sesija", "Sesija\Sesija.csproj", "{9EBE2F53-E424-4D57-961D-A5E463CE5EB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1098E43C-E135-4ED6-B5E6-C4C00C62D8A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1098E43C-E135-4ED6-B5E6-C4C00C62D8A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1098E43C-E135-4ED6-B5E6-C4C00C62D8A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1098E43C-E135-4ED6-B5E6-C4C00C62D8A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72173622-73E2-4716-9ACA-938421AD5775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72173622-73E2-4716-9ACA-938421AD5775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72173622-73E2-4716-9ACA-938421AD5775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72173622-73E2-4716-9ACA-938421AD5775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EBE2F53-E424-4D57-961D-A5E463CE5EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EBE2F53-E424-4D57-961D-A5E463CE5EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EBE2F53-E424-4D57-961D-A5E463CE5EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EBE2F53-E424-4D57-961D-A5E463CE5EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D00F221D-BC41-4BB2-94A8-960BF9F66D70}
+	EndGlobalSection
+EndGlobal
