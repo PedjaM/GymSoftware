@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1098E43C-E135-4ED6-B5E6-C4C00C62D8A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projektni</RootNamespace>
+    <AssemblyName>Projektni</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormaBiranjePaketa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaBiranjePaketa.Designer.cs">
+      <DependentUpon>FormaBiranjePaketa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaIstorija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaIstorija.Designer.cs">
+      <DependentUpon>FormaIstorija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaIzmenaProfila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaIzmenaProfila.Designer.cs">
+      <DependentUpon>FormaIzmenaProfila.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPotvrdaBrisanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaPotvrdaBrisanje.Designer.cs">
+      <DependentUpon>FormaPotvrdaBrisanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPotvrdaOtkazivanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaPotvrdaOtkazivanje.Designer.cs">
+      <DependentUpon>FormaPotvrdaOtkazivanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPotvrdaUplata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaPotvrdaUplata.Designer.cs">
+      <DependentUpon>FormaPotvrdaUplata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaPrijava.Designer.cs">
+      <DependentUpon>FormaPrijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaRegistracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaRegistracija.Designer.cs">
+      <DependentUpon>FormaRegistracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormaGlavna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormaGlavna.Designer.cs">
+      <DependentUpon>FormaGlavna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Komunikacija.cs" />
+    <Compile Include="KontrolerKI.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormaBiranjePaketa.resx">
+      <DependentUpon>FormaBiranjePaketa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaGlavna.resx">
+      <DependentUpon>FormaGlavna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaIstorija.resx">
+      <DependentUpon>FormaIstorija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaIzmenaProfila.resx">
+      <DependentUpon>FormaIzmenaProfila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaPotvrdaBrisanje.resx">
+      <DependentUpon>FormaPotvrdaBrisanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaPotvrdaOtkazivanje.resx">
+      <DependentUpon>FormaPotvrdaOtkazivanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaPotvrdaUplata.resx">
+      <DependentUpon>FormaPotvrdaUplata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaPrijava.resx">
+      <DependentUpon>FormaPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormaRegistracija.resx">
+      <DependentUpon>FormaRegistracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\štrafta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domen\Domen.csproj">
+      <Project>{693469dc-4c15-4e3b-9334-e8a2b75d54eb}</Project>
+      <Name>Domen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Server\Server.csproj">
+      <Project>{0680d55e-73a6-4a06-a63f-cc5dbaffe85f}</Project>
+      <Name>Server</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
