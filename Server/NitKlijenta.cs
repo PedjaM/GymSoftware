@@ -141,6 +141,28 @@ namespace Server
                             transfer.rezultat = lip.IzvrsiSO(lip as OpstiDomenskiObjekat);
                             formater.Serialize(tok, transfer);
                             break;
+                        case Operacije.ObrisiPaketAkt:
+                            ObrisiPaketAktivnost opa = new ObrisiPaketAktivnost();
+                            List<PaketAkt> listaPA = transfer.zahtev as List<PaketAkt>;
+                            List<int> rezultat = new List<int>();
+                            foreach (PaketAkt pa in listaPA)
+                            {
+                                rezultat.Add((int)opa.IzvrsiSO(pa as OpstiDomenskiObjekat));
+                            }
+                            if (rezultat.Contains(0)) transfer.rezultat = 0;
+                            else transfer.rezultat = 1;
+                            formater.Serialize(tok, transfer);
+                            break;
+                        case Operacije.ObrisiIstoriju:
+                            ObrisiIstoriju oi = new ObrisiIstoriju();
+                            transfer.rezultat = oi.IzvrsiSO(transfer.zahtev as OpstiDomenskiObjekat);
+                            formater.Serialize(tok, transfer);
+                            break;
+                        case Operacije.ObrisiPaket:
+                            ObrisiPaket op = new ObrisiPaket();
+                            transfer.rezultat = op.IzvrsiSO(transfer.zahtev as OpstiDomenskiObjekat);
+                            formater.Serialize(tok, transfer);
+                            break;
                         default:
                             break;
                     }

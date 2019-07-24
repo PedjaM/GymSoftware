@@ -76,7 +76,7 @@ namespace Domen
         {
             get
             {
-                return "IDKorisnika=" + IdKorisnika;
+                return "IDPaketa=" + IdPaketa;
             }
         }
 

@@ -90,6 +90,7 @@ namespace Domen
             PaketAkt pa = new PaketAkt();
             pa.IdPaketa = Convert.ToInt32(red["IDPaket"]);
             pa.IdAktivnosti = Convert.ToInt32(red["IDAktivnost"]);
+
             return pa;
         }
 

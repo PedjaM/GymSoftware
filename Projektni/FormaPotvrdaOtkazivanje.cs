@@ -17,7 +17,7 @@ namespace Projektni
 
         public Korisnik k1;
         public int idPaketa1;
-        Komunikacija kom;
+        public BindingList<Aktivnost> listaAktivnosti;
 
         public FormaPotvrdaOtkazivanje()
         {
@@ -28,16 +28,13 @@ namespace Projektni
 
         }
 
-        public FormaPotvrdaOtkazivanje(Korisnik k, int idPaketa)
+        public FormaPotvrdaOtkazivanje(Korisnik k, int idPaketa, BindingList<Aktivnost> listaAktivnosti)
         {
             k1 = k;
             idPaketa1 = idPaketa;
+            this.listaAktivnosti = listaAktivnosti;
             InitializeComponent();
-            kom = new Komunikacija();
-            if(!kom.PoveziSeNaServer())
-            {
-                MessageBox.Show("Greska: nije uspostavljena veza sa serverom");
-            }
+      
             if (idPaketa == 0)
             {
                 labelTekstOtkazivanje.Text = "Niste izabrali paket za otkazivanje";
@@ -60,19 +57,18 @@ namespace Projektni
         private void dugmeDaOtkaziPaket_Click(object sender, EventArgs e)
         {
 
-            int uspeh = kom.ObrisiLIP(idPaketa1);
-                //Broker.DajSesiju().ObrisiLIP(idPaketa1);
-            if (uspeh == 0) MessageBox.Show("Nije sačuvano!");
+
+            if (!KontrolerKI.OtkaziPaket(idPaketa1, listaAktivnosti)) MessageBox.Show("Nije sačuvano!");
             else
             {
                 this.Hide();
                 new FormaIstorija(k1).ShowDialog();
             }
 
-         
 
-                
-            }
+
+
+        }
 
         private void FormaPotvrdaOtkazivanje_Load(object sender, EventArgs e)
         {

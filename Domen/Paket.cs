@@ -13,9 +13,11 @@ namespace Domen
     {
         int idPaketa;
         double ukupnaCena;
+        List<Aktivnost> aktivnosti;
 
         public int IdPaketa { get => idPaketa; set => idPaketa = value; }
         public double UkupnaCena { get => ukupnaCena; set => ukupnaCena = value; }
+
 
 
         #region OpstiDomenskiObjekat
@@ -84,12 +86,14 @@ namespace Domen
             }
         }
 
+        public List<Aktivnost> Aktivnosti { get => aktivnosti; set => aktivnosti = value; }
+
         public OpstiDomenskiObjekat procitajRed(DataRow red)
         {
             Paket p = new Paket();
             p.IdPaketa = Convert.ToInt32(red["IDPaketa"]);
             p.UkupnaCena = Convert.ToDouble(red["UkupnaCena"]);
-
+            p.Aktivnosti = aktivnosti;
             return p;
         }
 

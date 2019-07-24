@@ -56,11 +56,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />
+    <Compile Include="SistemskeOperacije\AktivnostSO\ObrisiPaketAktivnost.cs" />
     <Compile Include="SistemskeOperacije\AktivnostSO\SacuvajPaketAktivnost.cs" />
     <Compile Include="SistemskeOperacije\AktivnostSO\VratiListuAktivnosti.cs" />
     <Compile Include="SistemskeOperacije\AktivnostSO\VratiSifruAktivnosti.cs" />
     <Compile Include="SistemskeOperacije\GradSO\VratiNazivGrada.cs" />
     <Compile Include="SistemskeOperacije\GradSO\VratiSveGradove.cs" />
+    <Compile Include="SistemskeOperacije\Istorija\ObrisiIstoriju.cs" />
     <Compile Include="SistemskeOperacije\Istorija\SacuvajIstoriju.cs" />
     <Compile Include="SistemskeOperacije\Istorija\VratiListuIstorija.cs" />
     <Compile Include="SistemskeOperacije\KorisnikSO\IzmeniProfil.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="SistemskeOperacije\KorisnikSO\ZapamtiUnetePodatke.cs" />
     <Compile Include="SistemskeOperacije\OpstaSistemskaOperacija.cs" />
     <Compile Include="SistemskeOperacije\PaketSO\ObrisiLIP.cs" />
+    <Compile Include="SistemskeOperacije\PaketSO\ObrisiPaket.cs" />
     <Compile Include="SistemskeOperacije\PaketSO\SacuvajPaket.cs" />
     <Compile Include="SistemskeOperacije\PaketSO\SacuvajPIL.cs" />
     <Compile Include="SistemskeOperacije\PaketSO\VratiAktivnostiPaketa.cs" />

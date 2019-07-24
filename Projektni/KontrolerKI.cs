@@ -126,5 +126,29 @@ namespace Projektni
 
         }
 
+        public static BindingList<Aktivnost> VratiAktivnostiPaketa(Paket p)
+        {
+            BindingList<Aktivnost> aktivnosti = new BindingList<Aktivnost>();
+            List<Aktivnost> la = k.VratiAktivnostiPaketa(p); ;
+            foreach(Aktivnost a in la)
+            {
+                aktivnosti.Add(a);
+            }
+            return aktivnosti;
+            
+        }
+
+        public static bool OtkaziPaket(int paketId, BindingList<Aktivnost> listaAktivnosti)
+        {
+            List<int> listaUspeh = new List<int>();
+            listaUspeh.Add(k.ObrisiListuPaketAkt(listaAktivnosti));
+            listaUspeh.Add(k.ObrisiIstoriju(paketId));
+            listaUspeh.Add(k.ObrisiPaket(paketId));
+
+
+
+            if (listaUspeh.Contains(0)) return false;
+            else return true;
+        }
     }
 }

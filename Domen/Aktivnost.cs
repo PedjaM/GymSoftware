@@ -15,6 +15,11 @@ namespace Domen
         string naziv;
         double cena;
 
+        public override string ToString()
+        {
+            return naziv;
+        }
+
         public int RbAktivnosti { get => rbAktivnosti; set => rbAktivnosti = value; }
         public string Naziv { get => naziv; set => naziv = value; }
         public double Cena { get => cena; set => cena = value; }

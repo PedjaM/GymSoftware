@@ -305,13 +305,13 @@ namespace Projektni
             }
         }
 
-        public List<Aktivnost> VratiAktivnostiPaketa(PaketAkt pa)
+        public List<Aktivnost> VratiAktivnostiPaketa(Paket p)
         {
             try
             {
                 TransferKlasa transfer = new TransferKlasa();
                 transfer.Operacija = Operacije.VratiAktivnostiPaketa;
-                transfer.zahtev = pa;
+                transfer.zahtev = p;
                 formater.Serialize(tok, transfer);
 
                 transfer = formater.Deserialize(tok) as TransferKlasa;
@@ -344,6 +344,70 @@ namespace Projektni
                 throw;
             }
         }
+
+        public int ObrisiListuPaketAkt(BindingList<Aktivnost> listaAktivnosti)
+        {
+            try
+            {
+                TransferKlasa transfer = new TransferKlasa();
+                transfer.Operacija = Operacije.ObrisiPaketAkt;
+                transfer.zahtev = listaAktivnosti;
+                formater.Serialize(tok, transfer);
+
+                transfer = formater.Deserialize(tok) as TransferKlasa;
+                return (int)transfer.rezultat;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public int ObrisiIstoriju(int paketId)
+        {
+            try
+            {
+                TransferKlasa transfer = new TransferKlasa();
+                transfer.Operacija = Operacije.ObrisiIstoriju;
+                Istorija i = new Istorija();
+                i.IdPaketa = paketId;
+                transfer.zahtev = i;
+                formater.Serialize(tok, transfer);
+
+                transfer = formater.Deserialize(tok) as TransferKlasa;
+                int x = (int)transfer.rezultat;
+                return x;
+            }
+            catch (Exception ex)
+            {
+
+                return 0;
+            }
+        }
+
+        public int ObrisiPaket(int paketId)
+        {
+            try
+            {
+                TransferKlasa transfer = new TransferKlasa();
+                transfer.Operacija = Operacije.ObrisiPaket;
+                Paket p = new Paket();
+                p.IdPaketa = paketId;
+                transfer.zahtev = p;
+                formater.Serialize(tok, transfer);
+
+                transfer = formater.Deserialize(tok) as TransferKlasa;
+                int x = (int)transfer.rezultat;
+                return x;
+            }
+            catch (Exception ex)
+            {
+
+                return 0;
+            }
+        }
+
 
         public int ObrisiLIP(int paketId)
         {

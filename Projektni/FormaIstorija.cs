@@ -19,7 +19,7 @@ namespace Projektni
         public Korisnik k1;
         public int idPaketa;
         BindingList<Istorija> listaIstorija;
-        Komunikacija kom;
+        BindingList<Aktivnost> listaAktivnosti;
 
         public FormaIstorija()
         {
@@ -52,24 +52,24 @@ namespace Projektni
 
         private void dugmeOtkaziIstorija_Click(object sender, EventArgs e)
         {
+            Istorija i = dataGridView1.CurrentRow.DataBoundItem as Istorija;
+            idPaketa = i.IdPaketa;
             this.Hide();
-            new FormaPotvrdaOtkazivanje(k1, idPaketa).ShowDialog();
+            new FormaPotvrdaOtkazivanje(k1, idPaketa, listaAktivnosti).ShowDialog();
         }
         
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             Istorija i = dataGridView1.CurrentRow.DataBoundItem as Istorija;
-        
-           
 
-            PaketAkt pa = new PaketAkt();
-            pa.IdPaketa = i.IdPaketa;
 
-            kom = new Komunikacija();
-            listaAktivnostiIstorija.DataSource = kom.VratiAktivnostiPaketa(pa);
-                                    //Broker.DajSesiju().vratiAktivnostiPaketa(idPaketa);
-                                    //listaAktivnostiIstorija.DisplayMember = "Naziv";
+
+            Paket p = new Paket();
+            p.IdPaketa = i.IdPaketa;
+
+            listaAktivnosti = KontrolerKI.VratiAktivnostiPaketa(p);
+            listaAktivnostiIstorija.DataSource = listaAktivnosti;
                                     //txtDatumOd.Text = kom.VratiCenuIDatume(p)[0];
                                     ////Broker.DajSesiju().vratiCenuIDatume(idPaketa)[0];
                                     //txtDatumDo.Text =kom.VratiCenuIDatume(p)[1];

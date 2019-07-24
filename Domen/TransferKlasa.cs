@@ -25,7 +25,10 @@ namespace Domen
         ObrisiLIP = 15,
         SacuvajPaket = 16,
         SacuvajIstoriju = 17,
-        SacuvajPaketAkt = 18
+        SacuvajPaketAkt = 18,
+        ObrisiPaketAkt = 19,
+        ObrisiIstoriju = 20,
+        ObrisiPaket = 21
     }
 
     [Serializable]
